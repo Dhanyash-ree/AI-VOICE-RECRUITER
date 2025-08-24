@@ -3,16 +3,16 @@ import { Home, ArrowRight } from 'lucide-react';
 
 const InterviewComplete = () => {
   return (
-    <div className="bg-midnight text-white font-sans antialiased flex flex-col min-h-screen">
+    <div className="bg-midnight text-white font-sans antialiased flex flex-col min-h-screen m-1">
 
       {/* Main Content */}
       <main className="flex-grow flex flex-col items-center justify-center space-y-8 py-16">
         
         {/* Success Icon */}
-        <div className="rounded-full bg-seaGreen p-4">
+        <div className="rounded-full bg-green-600">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-12 w-12 text-white"
+            className="h-12 w-12 text-white bg-green-600"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -27,17 +27,17 @@ const InterviewComplete = () => {
         </div>
 
         {/* Heading */}
-        <h1 className="text-4xl font-bold text-center">Interview Complete!</h1>
+        <h1 className="text-4xl font-bold text-center text-primary">Interview Complete!</h1>
 
         {/* Subheading */}
-        <p className="text-lg text-gray-300 text-center">
+        <p className="text-lg text-gray-300 text-center text-orange-300">
           Thank you for participating in the AI-driven interview with Alcruiter
         </p>
 
         {/* Image */}
         <div className="rounded-xl overflow-hidden shadow-lg">
           <img
-            src="https://www.svgrepo.com/show/586699/landscape-placeholder.svg"
+            src="/interview.jpg"
             alt="Interview Illustration"
             className="w-full h-auto object-cover max-w-4xl"
             style={{
@@ -52,10 +52,10 @@ const InterviewComplete = () => {
 
         {/* Next Steps */}
         <div className="bg-midnightLighter rounded-xl p-8 shadow-md w-full max-w-xl space-y-4">
-          <div className="flex items-center justify-center rounded-full bg-midnightLightest w-12 h-12 mx-auto">
+          <div className="flex items-center justify-center rounded-full bg-midnightLightest w-12 h-12 mx-auto bg-blue-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-electricBlue"
+              className="h-6 w-6 text-black"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -68,8 +68,8 @@ const InterviewComplete = () => {
               />
             </svg>
           </div>
-          <h2 className="text-2xl font-semibold text-center">What’s Next?</h2>
-          <p className="text-gray-300 text-center">
+          <h2 className="text-2xl font-semibold text-center text-primary">What’s Next?</h2>
+          <p className="text-gray-300 text-center text-orange-300">
             The recruiter will review your interview responses and will contact you soon regarding the next steps.
           </p>
           <p className="text-gray-400 text-sm text-center">
@@ -97,16 +97,13 @@ const InterviewComplete = () => {
             <Home className="h-5 w-5" />
             <span>Return to Homepage</span>
           </button>
-          <button className="bg-electricBlue hover:bg-electricBlueDark text-white rounded-lg py-3 px-6 flex items-center space-x-2 transition duration-300 ease-in-out">
-            <span>View Other Opportunities</span>
-            <ArrowRight className="h-5 w-5" />
-          </button>
+          
         </div>
       </main>
 
       {/* Footer */}
       <footer className="bg-midnightLighter text-gray-400 text-center py-4">
-        <p>&copy; 2023 Alcruiter. All rights reserved.</p>
+        <p className='text-black'>&copy; 2025 Alcruiter. All rights reserved.</p>
       </footer>
     </div>
   );

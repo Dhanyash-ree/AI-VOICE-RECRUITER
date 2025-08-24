@@ -82,8 +82,8 @@ let { data: interview, error } = await supabase
                     <h2 className='font-bold'>Before You Begin </h2>
                     <ul>
                         <li className='text-primary text-sm'>- Test Your Internet Connection</li>
-                        <li className='text-primary text-sm'>- Test Your Internet Connection</li>
-                        <li className='text-primary text-sm'>- Test Your Internet Connection</li>
+                        <li className='text-primary text-sm'>- For Better Experience Use Laptop or Desktop </li>
+                        <li className='text-primary text-sm'>- Ensure your microphone and speakers are functioning correctly</li>
                     </ul>
                 </div>
 
