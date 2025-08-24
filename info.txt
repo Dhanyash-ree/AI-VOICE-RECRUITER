@@ -1,0 +1,28 @@
+in terminal ->open the folder 
+
+npx create-next-app@latest 
+give app name
+choose yes,no 
+
+then open in vsc 
+check the versions 
+
+
+npm run dev
+
+fronyt end ->
+ui.shadecn.com ->css components (tailwind css)
+
+backend-> 
+supabase dashboard ->create project  
+ 
+ install 
+create folder services -> supabaseClient ->Import function createClient ()
+
+->project setting ->data api ->ural, key 
+copy them in .env.local -> NEXT_PUBLIC use in createClient() 
+
+Authentification 
+
+
+
