@@ -158,7 +158,7 @@ export default function LandingPage() {
             className="h-[80px] w-[300px] object-contain"
           />
           <Link href="/auth">
-            <Button variant="outline" className='cursor-pointer'>Dashboard</Button>
+            <Button variant="outline" className='cursor-pointer bg-primary text-white'>Dashboard</Button>
           </Link>
         </div>
       </header>
