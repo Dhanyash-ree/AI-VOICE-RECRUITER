@@ -4,31 +4,34 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/services/supabaseClient";
 
-
 export default function AuthCallbackPage() {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRedirect = async () => {
-      // Get session after redirect
-      const { data, error } = await supabase.auth.getSession();
+    const handleAuth = async () => {
+      // check immediately
+      const { data: { session } } = await supabase.auth.getSession();
 
-      if (error) {
-        console.error("Error fetching session:", error.message);
-        router.push("/auth-error"); // optional error page
+      if (session) {
+        router.push("/dashboard");
         return;
       }
 
-      if (data.session) {
-        // ✅ User logged in, go to dashboard
-        router.push("/dashboard");
-      } else {
-        // ❌ No session, go back to login
-        router.push("/");
-      }
+      // also listen for future auth state changes
+      const {
+        data: { subscription },
+      } = supabase.auth.onAuthStateChange((_event, session) => {
+        if (session) {
+          router.push("/dashboard");
+        } else {
+          router.push("/");
+        }
+      });
+
+      return () => subscription.unsubscribe();
     };
 
-    handleRedirect();
+    handleAuth();
   }, [router]);
 
   return (

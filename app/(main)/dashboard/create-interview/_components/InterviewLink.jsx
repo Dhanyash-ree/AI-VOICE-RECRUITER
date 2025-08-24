@@ -57,7 +57,7 @@ const onCopyLink=async()=>{
         {/* <Link href={'/create-interview'}><Button><Plus/>Create New Interview</Button></Link> */}
 
         <Link href={'/dashboard/create-interview'} className='bg-white border border-gray-500 rounded-lg p-5'>
-    <Video className='p-3 bg-blue-50 rounded-lg h-12 w-12  '/>
+    {/* <Video className='p-3 bg-blue-50 rounded-lg h-12 w-12'/> */}
     <h2 className='font-bold'>Create New Interview </h2>
     <p className='text-gray-300'>Create AI Interviews And Schedule Them With Candidates</p>
     </Link>
